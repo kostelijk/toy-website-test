@@ -15,12 +15,13 @@ env:
   ENVIRONMENT_TYPE: Test
 
 jobs:
-  lint:
+  lint: 
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v2
+    - uses: actions/checkout@v2
     - name: Run Bicep linter
-      run: az bicep build --file ./deploy/main.bicep
+      run: az bicep build --file deploy/main.bicep
+
   validate: 
     runs-on: ubuntu-latest
     steps:
@@ -39,6 +40,7 @@ jobs:
         template: ./deploy/main.bicep
         parameters: environmentType=${{ env.ENVIRONMENT_TYPE }}
         deploymentMode: Validate
+
   deploy:
     runs-on: ubuntu-latest
     needs: [lint, validate]
