@@ -1,0 +1,1 @@
+The summary contains usefull links to resources and techniques mentioned in this learning module. https://docs.microsoft.com/en-us/learn/modules/test-bicep-code-using-github-actions/11-summary 
