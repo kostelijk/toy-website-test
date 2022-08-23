@@ -98,5 +98,5 @@ jobs:
         Invoke-Pester `
           -Container $container `
           -CI
-    name: Run smoke tests
-    shell: pwsh
+      name: Run smoke tests
+      shell: pwsh
